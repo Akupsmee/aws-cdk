@@ -28,7 +28,7 @@ jobs:
         run: npm ci
 
       - name: Build CDK stack
-        run: cdk build
+        run: npm run build
 
       - name: Run unit tests
         run: npm test
