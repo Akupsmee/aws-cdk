@@ -25,7 +25,13 @@ jobs:
         run: npm install -g aws-cdk
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Build CDK stack
+        run: cdk build
+
+      - name: Run unit tests
+        run: npm test
 
       - name: Synthesize CDK stack
         run: cdk synth
