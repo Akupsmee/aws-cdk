@@ -3,7 +3,7 @@ name: MyCDKWorkflow
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -30,8 +30,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY}}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS }}
           aws-region: eu-central-1
 
       - name: Deploy CDK stack
