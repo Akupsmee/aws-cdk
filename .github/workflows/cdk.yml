@@ -34,5 +34,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-central-1
 
-      - name: Deploy CDK stack
-        run: cdk deploy --all --require-approval never
+      # - name: Deploy CDK stack
+      #   run: cdk deploy --all --require-approval never
+
+      - name: Delete CDK stack
+        run: cdk destroy --all --force
+         
+
+        
